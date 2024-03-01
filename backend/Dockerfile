@@ -2,12 +2,13 @@
 FROM python:3.8-slim
 
 // set /app as working directory
+WORKDIR /app
 
 // copy everything into /app 
 COPY . . 
 
 // Install requirements
-RUN pip install requirements.txt
+RUN pip install -r requirements.txt
 
 // Expose correct port:
 EXPOSE 5000 
